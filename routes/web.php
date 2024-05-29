@@ -30,8 +30,4 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-Route::get('dashboard', function () {
-    return view('layouts.dashboard');
-});
-
 require __DIR__.'/auth.php';
