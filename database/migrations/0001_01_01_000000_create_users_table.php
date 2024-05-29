@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('document_number', 12)->default('0000000000');
             $table->string('phone_number', 15)->default('00000000000');
             $table->string('address', 100)->default('Rua 0, 0');
             $table->unsignedBigInteger('country_id')->unsigned()->default(49);
