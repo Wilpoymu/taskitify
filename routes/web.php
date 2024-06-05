@@ -9,7 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::redirect('/', '/dashboard');
+Route::redirect('/', '/index');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get(
@@ -32,6 +32,10 @@ Route::middleware('auth')->group(function () {
     Route::get('admin', function () {
         return view('layouts.admin');
     });
+});
+
+Route::get('index', function () {
+    return view('layouts.index');
 });
 
 require __DIR__ . '/auth.php';
